@@ -1,0 +1,144 @@
+@use '../../styles/scss/' as *;
+
+.about{
+    // padding:5rem;
+    // padding: 60px 0;
+    // overflow: hidden;
+    // background-color: $body-bg;
+    // animation: fadeInFromBottom 3s forwards;
+    .container{
+    //     width: 100%;
+    //     margin: 15px ;
+    // padding-right: 3rem;
+    // padding-left: 3rem;
+    // margin-right: auto;
+    // margin-left: auto;
+        .about_detail{
+            p{
+                margin-bottom: 0;
+                font-family: 'Google Sans Regular';
+                text-align: justify;
+                font-size: 1.2rem;
+            }
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+            .col-lg-4{
+                position: relative;
+                // width: 100%;
+                padding-right: 15px;
+                padding-left: 15px;
+
+                @media (min-width: 992px)
+                {
+
+                        -ms-flex: 0 0 33.333333%;
+                        flex: 0 0 33.333333%;
+                        max-width: 33.333333%;
+                    
+                }
+
+                .img-fluid{
+                    max-width: 100%;
+                    height: auto;
+                    padding: 0;
+                    filter: drop-shadow(5px 5px 5px #666666);
+                }
+         
+            }
+            .about_content{
+                padding-top: 1.5rem;
+                position: relative;
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 15px;
+                
+                @media (min-width: 992px)
+                {
+                  
+                        flex: 0 0 66.666667%;
+                        max-width: 66.666667%;
+                        padding-top: 0;
+                   
+                }
+
+
+                h3{
+                    font-weight: 700;
+                    margin-top: 2rem;
+                    @include md-tablet{
+                        margin-top: 0;
+                    }
+                    font-size: 26px;
+                    color: lighten($main-color,30);
+                }
+                .col-lg-6{
+                    position: relative;
+                    width: 100%;
+                    padding-right: 15px;
+                    padding-left: 15px;
+                    margin-top: 1rem;
+
+                 
+                    @media (max-width:1247px){
+                        
+                        font-size: 0.77rem;
+                }
+        
+                 
+                    @media (max-width:992px){
+                       
+                        &:first-child{
+                            margin-top: 1rem;
+                        }
+                        margin-top: 0;
+                    
+                    }
+
+
+                    @media (min-width: 992px)
+                    {
+                        -ms-flex: 0 0 50%;
+                        flex: 0 0 50%;
+                        max-width: 50%;
+
+
+                    }
+
+                    
+                  
+                    
+
+                    ul{
+                        list-style: none;
+                        @include md-tablet{
+                            font-size: 1rem;
+                        }
+                        
+                    
+                    li{
+                        
+                        padding-bottom: 0.5rem;
+                        i{
+                            font-size: 20px;
+                            padding-right: 2px;
+                            color:$main-color;
+                        }
+                    }
+                }
+                }
+            }
+        }
+}
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+@use '../../styles/scss/' as *;
+
+
+.back_to_top{
+    position: fixed!important;
+    right: 0;
+    margin: 1rem;
+    margin-bottom: 2rem;
+    bottom: 0;
+    width: 3rem!important;
+    height: 3rem!important;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.8s;
+
+}
