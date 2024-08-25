@@ -1,0 +1,19 @@
+@import "../../styles/scss/animation";
+@import "../../styles/scss/breakpoint";
+@import "../../styles/scss/color";
+@import "../../styles/scss/fonts";
+@import "../../styles/scss/mixins";
+@import "../../styles/scss/variables";
+
+.back_to_top {
+  position: fixed !important;
+  right: 0;
+  margin: 1rem;
+  margin-bottom: 2rem;
+  bottom: 0;
+  width: 3rem !important;
+  height: 3rem !important;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.8s;
+}

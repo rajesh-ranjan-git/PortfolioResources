@@ -1,0 +1,113 @@
+@import "../../styles/scss/animation";
+@import "../../styles/scss/breakpoint";
+@import "../../styles/scss/color";
+@import "../../styles/scss/fonts";
+@import "../../styles/scss/mixins";
+@import "../../styles/scss/variables";
+
+.portfolio_section {
+  // padding: 70px 30px;
+  .portfolio_container {
+    margin: auto;
+    .portfolio_item_btns {
+      @include flex(center, center);
+      #portfolio-filters {
+        padding: 0;
+        margin: 0 auto 35px auto;
+        list-style: none;
+        text-align: center;
+        background: lighten($main-color, 8);
+        box-shadow: $box-shadow;
+
+        border-radius: 10px;
+        padding: 2px 15px;
+
+        li {
+          cursor: pointer;
+          display: inline-block;
+          padding: 10px 15px 8px 15px;
+
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 1;
+          text-transform: uppercase;
+          // color: #272829;
+          color: white;
+          // margin-bottom: 5px;
+          transition: all 0.3s ease-in-out;
+
+          background-image: linear-gradient(
+            to right,
+            #f54568,
+            #f54568 50%,
+            white 50%
+          );
+          background-size: 200% 100%;
+          background-position: -100%;
+          position: relative;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          &::before {
+            content: "";
+            background: #f54568;
+            display: block;
+            position: absolute;
+            bottom: -3px;
+            border-radius: 1rem;
+            left: 0;
+            width: 0;
+            height: 3px;
+            transition: all 0.3s ease-in-out;
+          }
+
+          &:hover {
+            background-position: 0;
+
+            &::before {
+              width: 100%;
+            }
+          }
+
+          &.filter-active {
+            background-position: 0;
+            &::before {
+              width: 100%;
+            }
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .portfolio_grid_row {
+      // display: grid;
+      // grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
+      // grid-gap: 15px 15px;
+      // justify-content: center;
+      // align-items: baseline;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 364px));
+      grid-gap: 14px;
+      justify-content: center;
+      align-items: baseline;
+
+      @include device_1365 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      @include tablet {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      @include md_tablet {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      @include device_700 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+    }
+  }
+}

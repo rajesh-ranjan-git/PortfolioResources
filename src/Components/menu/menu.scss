@@ -1,0 +1,187 @@
+@import "../../styles/scss/animation";
+@import "../../styles/scss/breakpoint";
+@import "../../styles/scss/color";
+@import "../../styles/scss/fonts";
+@import "../../styles/scss/mixins";
+@import "../../styles/scss/variables";
+
+//  ======== NAV ========
+.sidenav_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 1.5rem 1.5rem 2rem;
+  width: $width-nav;
+  background-color: $color-bg-nav;
+  color: #fff;
+  transition: all 0.5s ease;
+  z-index: 9998;
+
+  &.active {
+    width: 19rem;
+    padding: 1.5rem 1.5rem 2rem;
+  }
+
+  @media (max-width: 1199px) {
+    width: 0px;
+    padding: 0;
+  }
+}
+
+.nav {
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+
+  &_brand {
+    @include nav-item-grid;
+    column-gap: 0.4rem;
+    padding: $padding-nav-item 0;
+    font-weight: 600;
+
+    .nav_icon_menu {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 20%;
+      display: grid;
+      place-items: center;
+      justify-content: center;
+      align-content: center;
+      cursor: pointer;
+      transition: 0.1s ease;
+      &:hover {
+        background: lighten($color-bg-nav, 50);
+      }
+      &:active {
+        background: lighten($color-bg-nav, 50);
+      }
+    }
+
+    &_logo {
+      cursor: pointer;
+    }
+  }
+  &_list {
+    flex: 1;
+  }
+
+  &_item {
+    border-radius: 0.5rem;
+    transition: 0.05s ease;
+    cursor: pointer;
+    &:hover {
+      background-color: lighten($color-bg-nav, 50);
+      color: #fff;
+    }
+
+    .active {
+      background-color: lighten($color-bg-nav, 50);
+      border-radius: 0.5rem;
+      margin-bottom: 0.1rem;
+      margin-top: 0.1rem;
+    }
+
+    .nav_drop {
+      height: 0px;
+      overflow: hidden;
+      font-size: $font-size-small;
+      transition: height 0.2s ease;
+
+      a {
+        color: $color-secondary;
+        transition: 0.05s ease;
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      .padding {
+        // to fix toggle height issues
+        padding: 0 0 0.75rem 3rem;
+      }
+    }
+  }
+
+  &_link {
+    @include nav-item-grid;
+    padding: $padding-nav-item;
+    color: #fff;
+  }
+
+  &_name {
+    font-size: $small-font-size;
+  }
+
+  &_icon {
+    font-size: 1.2rem;
+  }
+
+  &_user {
+    @include nav-item-grid;
+    column-gap: 0.6rem;
+    margin-bottom: 4rem;
+    padding: 0.2rem 0;
+    border-radius: 2rem;
+    cursor: pointer;
+    &:hover {
+      background: lighten($color-bg-nav, 5);
+    }
+
+    &_image {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 100%;
+      overflow: hidden;
+
+      img {
+        margin-top: 0.4rem;
+        transform: scale(1.5); // test
+      }
+    }
+
+    &_info {
+      line-height: 1.2rem;
+
+      &_name {
+        font-size: 1rem;
+      }
+      &_email {
+        font-size: 0.7rem;
+        font-weight: 300;
+        color: $color-secondary;
+      }
+    }
+  }
+}
+
+.toggle-icon {
+  justify-self: flex-end;
+}
+
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  transition: all 0.2s;
+  outline: none !important;
+  line-height: 1;
+  cursor: pointer;
+  text-align: right;
+  border-radius: 0.5rem;
+  background-color: $main-color;
+  color: white;
+
+  &:hover {
+    background-color: lighten($color-bg-nav, 60);
+  }
+
+  @media (min-width: 1200px) {
+    display: none !important;
+  }
+}

@@ -1,0 +1,46 @@
+$body-bg: rgb(190, 201, 229);
+// $body-bg: rgb(245, 244, 255);
+// $main-color:#12192c;
+$main-color: #040b14;
+$main-alternate: #040b14;
+$txt-color: black;
+
+$box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+$shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$pressed-shadow: inset 2px 2px 4px #e2e8f0,
+  inset -2px -2px 4px rgb(241, 237, 237);
+$header-height: 8rem;
+$header-shrink-height: 5rem;
+$border-radius: 30px;
+
+$mobile-width: 600px;
+$tablet-width: 1024px;
+$small-tablet-width: 768px;
+$device-850: 850px;
+$device-700: 700px;
+$device-1365: 1365px;
+$large-tablet-width: 1200px;
+$md-tablet-width: 992px;
+$xs-width: 400px;
+$lg-width: 1600px;
+
+$font-family: "Poppins", "Montserrat", sans-serif;
+$small-font-size: 0.875rem;
+
+$text-gray-600: #718096;
+$text-gray-800: #2d3748;
+
+$pokemon_red: #e53935;
+
+$secondary_red: #f54568;
+
+$white: white;
+$width-nav: 5.6rem;
+$color-primary: #0c5df4;
+// $color-bg-nav: #12192c;
+$color-bg-nav: #040b14;
+
+$color-secondary: #b6cefc;
+$font-size-normal: 1rem;
+$font-size-small: 0.875rem;
+$padding-nav-item: 0.75rem;

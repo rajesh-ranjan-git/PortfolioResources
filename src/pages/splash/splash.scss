@@ -1,0 +1,30 @@
+@import "../../styles/scss/animation";
+@import "../../styles/scss/breakpoint";
+@import "../../styles/scss/color";
+@import "../../styles/scss/fonts";
+@import "../../styles/scss/mixins";
+@import "../../styles/scss/variables";
+
+.logo_wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: $main-color;
+  align-items: center;
+  justify-content: center;
+  @include flex(center, center);
+  & .screen {
+    height: 100%;
+    @include flex(center, center);
+    overflow: hidden;
+    border-radius: 50%;
+    animation: grow 1s forwards;
+    background: url("../../assets/fonts/overlay_stars.svg");
+  }
+
+  & #logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

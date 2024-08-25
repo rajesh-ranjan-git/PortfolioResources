@@ -1,0 +1,78 @@
+@import "../../styles/scss/animation";
+@import "../../styles/scss/breakpoint";
+@import "../../styles/scss/color";
+@import "../../styles/scss/fonts";
+@import "../../styles/scss/mixins";
+@import "../../styles/scss/variables";
+
+.base_home_content {
+  padding: 60px 0;
+  overflow: hidden;
+  animation: fadeInFromBottom 3s forwards;
+  background-color: ghostwhite;
+
+  .container {
+    width: 100%;
+    margin: 15px;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (max-width: 1200px) {
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
+    @media (max-width: 500px) {
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+  }
+
+  & .about {
+    background-color: wheat;
+  }
+  .about {
+    background-color: aliceblue;
+  }
+  & ~ .about {
+    background-image: url("https://arpitfolio.herokuapp.com/static/First/images/backgrounds/education-bg.png");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      // bottom: 0;
+      border-style: solid;
+      border-color: transparent;
+      border-width: 10vh 50vw;
+      border-bottom-color: white;
+      border-left-color: white;
+    }
+  }
+}
+
+// .about{
+// background-color: white;
+//     background-image: url('https://arpitfolio.herokuapp.com/static/First/images/backgrounds/education-bg.png');
+
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     &::after{
+
+//             content: "";
+//             position: absolute;
+//             left: 0;
+//             right: 0;
+//             bottom: 0;
+//             border-style: solid;
+//             border-color: transparent;
+//             border-width: 10vh 50vw;
+//             border-bottom-color: $body-bg;
+//             border-left-color: white;
+
+//     }
+// }

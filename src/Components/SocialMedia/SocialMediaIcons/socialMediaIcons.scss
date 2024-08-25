@@ -1,0 +1,54 @@
+@import "../../../styles/scss/animation";
+@import "../../../styles/scss/breakpoint";
+@import "../../../styles/scss/color";
+@import "../../../styles/scss/fonts";
+@import "../../../styles/scss/mixins";
+@import "../../../styles/scss/variables";
+
+.icon_button {
+  color: white;
+
+  border-radius: 2.6rem;
+  cursor: pointer;
+  display: inline-block;
+  height: 2.6rem;
+  line-height: 2.6rem;
+  margin: 0 10px 10px 0;
+  position: relative;
+  text-align: center;
+  user-select: none;
+  width: 2.6rem;
+  background-color: lighten($main-color, 20);
+  transition: 0.2s ease-in;
+  z-index: 200;
+
+  &.facebook {
+    background-color: #3b5998;
+  }
+  &.linkedin {
+    background-color: #0e76a8;
+  }
+  &.github {
+    background-color: #333;
+  }
+  &.gitlab {
+    background-color: #fca326;
+  }
+  &.stackoverflow {
+    background-color: #f48024;
+  }
+
+  &.google {
+    background-color: #ea4335;
+  }
+  &.twitter {
+    background-color: #1da1f2;
+  }
+  &.instagram {
+    background-color: #e4405f;
+  }
+
+  &:hover {
+    background-color: $main-color;
+  }
+}

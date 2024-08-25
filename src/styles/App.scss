@@ -1,0 +1,147 @@
+@import "./scss/animation";
+@import "./scss/breakpoint";
+@import "./scss/color";
+@import "./scss/fonts";
+@import "./scss/mixins";
+@import "./scss/variables";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+
+  @include tablet {
+    font-size: 80%;
+  }
+  @include mobile {
+    font-size: 60%;
+  }
+}
+
+body {
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1.5;
+
+  background-color: $body-bg;
+  color: $txt-color;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input {
+  outline: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+hr {
+  margin: 0.5rem 0;
+  opacity: 0.1;
+  border: none;
+  border-bottom: 1px solid $color-secondary;
+}
+
+iframe {
+  border: 0;
+}
+
+.container {
+  max-width: 1660px;
+  margin: auto;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.section {
+  padding: 0 2rem;
+}
+.section_header {
+  @include flex(center, space-between);
+}
+
+a:hover {
+  color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $body-bg;
+
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $main-color;
+  border-radius: 0px;
+  &:hover {
+    background: lighten($main-color, 50);
+  }
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #12192c;
+  font-size: 2.5rem;
+  font-family: "Google Sans Bold";
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 4rem;
+    height: 4px;
+    border-radius: 2rem;
+    background: #12192c;
+    left: 0;
+  }
+}
+
+.section-text {
+  color: #040b14;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  text-align: justify;
+}

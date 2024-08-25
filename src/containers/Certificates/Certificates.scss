@@ -1,0 +1,52 @@
+@import "../../styles/scss/animation";
+@import "../../styles/scss/breakpoint";
+@import "../../styles/scss/color";
+@import "../../styles/scss/fonts";
+@import "../../styles/scss/mixins";
+@import "../../styles/scss/variables";
+
+.certificates {
+  .css-lmrzma {
+    margin-top: 4rem;
+
+    .slick-slider {
+      .slick-dots {
+        .slick-active {
+          button {
+            background-color: $main-color !important;
+          }
+        }
+        li {
+          &:hover {
+            button {
+              background-color: lighten($main-color, 60) !important;
+            }
+          }
+          button {
+            width: 12px;
+            height: 12px;
+            background-color: #ddd !important;
+            border-radius: 50%;
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+      .slick-list {
+        // min-height: 300px!important;
+        .slick-track {
+          .slick-slide {
+            // width: 500px!important;
+          }
+        }
+      }
+      .slick-arrow {
+        &::before {
+          color: $main-color;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

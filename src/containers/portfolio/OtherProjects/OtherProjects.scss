@@ -1,0 +1,163 @@
+@import "../../../styles/scss/animation";
+@import "../../../styles/scss/breakpoint";
+@import "../../../styles/scss/color";
+@import "../../../styles/scss/fonts";
+@import "../../../styles/scss/mixins";
+@import "../../../styles/scss/variables";
+
+.other_projects {
+  margin-top: 4rem;
+
+  .other_projects_row {
+    @include flex(flex-start, flex-start);
+
+    flex-wrap: wrap;
+    .other_project_item {
+      margin-bottom: 20px;
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+
+      @include large_tablet {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      @include small_tablet {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      &:hover {
+        .icon {
+          background-color: rgba(lighten($main-color, 20), 0.025);
+          color: lighten($main-color, 20);
+          border: 1px solid lighten($main-color, 20);
+          svg {
+            font-size: 30px;
+          }
+        }
+      }
+      .icon {
+        float: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 54px;
+        height: 54px;
+        background: $main-color;
+        border-radius: 50%;
+        color: white;
+        transition: 0.25s;
+        border: 1px solid $main-color;
+
+        @media screen and (max-width: 900px) {
+          width: 40px;
+          height: 40px;
+        }
+        @media screen and (max-width: 500px) {
+          width: 30px;
+          height: 30px;
+        }
+
+        svg {
+          transition: 0.25s;
+
+          font-size: 20px;
+
+          @media screen and (max-width: 900px) {
+            width: 18px;
+            height: 18px;
+          }
+          @media screen and (max-width: 500px) {
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+      .title {
+        margin-left: 80px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-size: 18px;
+
+        @media screen and (max-width: 900px) {
+          font-size: 2vw;
+          margin-left: 58px;
+        }
+        @media screen and (max-width: 500px) {
+          font-size: 3.5vw;
+        }
+
+        a {
+          transition: 0.25s;
+          color: #343a40;
+          &:hover {
+            color: lighten($main-color, 20);
+          }
+        }
+      }
+      .description {
+        margin-left: 80px;
+        line-height: 24px;
+        font-size: 14px;
+
+        @media screen and (max-width: 900px) {
+          font-size: 1.5vw;
+          margin-left: 58px;
+        }
+        @media screen and (max-width: 500px) {
+          font-size: 2.5vw;
+        }
+      }
+    }
+  }
+}
+
+.services .icon-box {
+  margin-bottom: 20px;
+}
+
+.services .icon {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  background: #040b14;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid #040b14;
+}
+
+.services .icon i {
+  color: #fff;
+  font-size: 24px;
+}
+
+.services .icon-box:hover .icon {
+  background: #fff;
+}
+
+.services .icon-box:hover .icon i {
+  color: #040b14;
+}
+
+.services .title {
+  margin-left: 80px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.services .title a {
+  color: #343a40;
+}
+
+.services .title a:hover {
+  color: #149ddd;
+}
+
+.services .description {
+  margin-left: 80px;
+  line-height: 24px;
+  font-size: 14px;
+}

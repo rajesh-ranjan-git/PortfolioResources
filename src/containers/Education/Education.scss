@@ -1,0 +1,30 @@
+@import "../../styles/scss/animation";
+@import "../../styles/scss/breakpoint";
+@import "../../styles/scss/color";
+@import "../../styles/scss/fonts";
+@import "../../styles/scss/mixins";
+@import "../../styles/scss/variables";
+
+.education_card {
+  @include flex(center, center);
+  flex-wrap: wrap;
+
+  @include tablet {
+    flex-direction: column;
+  }
+  .edu_slider {
+    flex: 1;
+
+    @include tablet {
+      &:nth-child(2) {
+        margin-top: 1rem;
+      }
+    }
+
+    @media screen and (max-width: 1340px) {
+      &:nth-child(2) {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,211 @@
+@import "../../styles/scss/animation";
+@import "../../styles/scss/breakpoint";
+@import "../../styles/scss/color";
+@import "../../styles/scss/fonts";
+@import "../../styles/scss/mixins";
+@import "../../styles/scss/variables";
+
+.skills {
+  padding-block: 80px;
+  .skills-content {
+    margin-bottom: 50px;
+
+    .section-subtitle {
+      position: relative;
+      color: lighten($main-color, 50);
+      text-transform: uppercase;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 60px;
+        height: 2px;
+        background: lighten($main-color, 50);
+      }
+    }
+
+    .section-text {
+      color: $main-color;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      font-size: 1.2rem;
+      text-align: justify;
+    }
+
+    .skills-toggle {
+      position: relative;
+      width: max-content;
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      border-radius: 100px;
+      box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.184);
+      border: 1px solid lighten($main-color, 68);
+      z-index: 1;
+      button {
+        background: none;
+        border: none;
+        font: inherit;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        bottom: 5px;
+        width: 93px;
+        background: $main-color;
+        border-radius: 100px;
+        transition: 0.25s ease-in-out;
+        z-index: -1;
+      }
+      &.active::before {
+        left: 98px;
+        width: 94px;
+      }
+      .toggle-btn {
+        color: $main-color;
+        font-family: $font-family;
+        padding: 5px 27px;
+        font-family: "Google Sans Bold";
+
+        transition: 0.25s ease-in-out;
+        @media screen and (max-width: 1024px) {
+          padding: 5px 31px;
+        }
+        @media screen and (max-width: 600px) {
+          padding: 5px 35px;
+        }
+        &.active {
+          color: white;
+        }
+      }
+    }
+  }
+  .skills-box {
+    .skills-list {
+      @include flex(center, center);
+      flex-wrap: wrap;
+      gap: 15px;
+      animation: fade-in 1s ease-out forwards;
+    }
+    .tools-list {
+      display: none;
+    }
+    &.active {
+      .skills-list {
+        display: none;
+      }
+      .tools-list {
+        @include flex(center, center);
+        flex-wrap: wrap;
+        gap: 15px;
+        animation: fade-in 1s ease-out forwards;
+      }
+    }
+  }
+
+  .skill-card {
+    position: relative;
+    background: hsl(0, 0%, 100%);
+    width: 80px;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.284);
+    cursor: help;
+
+    &:hover {
+      .tooltip {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .card-icon {
+      background: white;
+      width: 60px;
+      height: 60px;
+      // overflow: hidden;
+      display: grid;
+      place-items: center;
+      img {
+        width: auto;
+        height: auto;
+        max-width: 60px;
+        max-height: 60px;
+      }
+    }
+
+    .tooltip {
+      position: absolute;
+      top: -40px;
+      background: $main-color;
+      min-width: max-content;
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 4px;
+      box-shadow: $box-shadow;
+      transform: translateY(-10px);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.25s ease-in-out;
+      z-index: 1;
+    }
+  }
+}
+
+@media (min-width: 550px) {
+  //   .section-title { max-width: 380px; }
+}
+@media (min-width: 768px) {
+  // .section-title { max-width: 430px; }
+}
+
+@media (min-width: 992px) {
+  .section-content {
+    position: relative;
+    padding-left: 40px;
+  }
+
+  .section-subtitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(0.75turn) translateX(-100%);
+    transform-origin: left top;
+    margin-bottom: 0;
+  }
+
+  .section-subtitle::after {
+    top: 8px;
+    left: auto;
+    right: calc(100% + 20px);
+  }
+
+  /**
+     * SKILLS
+     */
+
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .skills-content {
+    margin-bottom: 0;
+  }
+
+  .skills-toggle {
+    margin-inline: 0;
+  }
+}

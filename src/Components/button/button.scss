@@ -1,0 +1,156 @@
+@import "../../styles/scss/animation";
+@import "../../styles/scss/breakpoint";
+@import "../../styles/scss/color";
+@import "../../styles/scss/fonts";
+@import "../../styles/scss/mixins";
+@import "../../styles/scss/variables";
+
+.button_container_1 {
+  position: absolute;
+  width: 10rem;
+  height: 4rem;
+  // margin-left: auto;
+  // margin-right: auto;
+  // margin-top: 6vh;
+  overflow: hidden;
+  border: 1px solid white;
+  font-family: "Google Sans Regular", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  background-color: white;
+
+  &:hover {
+    border-width: 1px;
+    border-color: $main-color;
+    box-shadow: $box-shadow;
+  }
+
+  button {
+    width: 100%;
+    height: 100%;
+    font-family: $font-family;
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+
+    @include button(
+      #000,
+      "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
+      2300%,
+      100%,
+      none,
+      #fff
+    );
+    cursor: pointer;
+    animation: ani2 0.7s steps(22) forwards;
+    &:hover {
+      animation: ani 0.7s steps(22) forwards;
+    }
+  }
+}
+
+.mas {
+  position: absolute;
+  color: $main-color;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-family: $font-family;
+  font-weight: 300;
+  position: absolute;
+  font-size: 1.5rem;
+  overflow: hidden;
+  margin: auto;
+  font-weight: bold;
+  @include flex(center, center);
+}
+
+.button_container_3 {
+  position: absolute;
+  width: 10rem;
+  height: 4rem;
+  overflow: hidden;
+  margin-top: 8vh;
+  border: 1px solid #000;
+  font-family: $font-family;
+  font-weight: 300;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  background-color: white;
+
+  &:hover {
+    border-width: 1px;
+    border-color: $main-color;
+    box-shadow: $box-shadow;
+  }
+
+  button {
+    width: 100%;
+    height: 100%;
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+
+    @include button(
+      #000,
+      "https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png",
+      7100%,
+      100%,
+      none,
+      #fff
+    );
+    cursor: pointer;
+    animation: ani2 0.7s steps(70) forwards;
+
+    &:hover {
+      animation: ani 0.7s steps(70) forwards;
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+  font-family: $font-family;
+}
+
+.btn {
+  border: 4px solid transparent;
+  background-color: $main-color;
+  color: $white;
+  border-radius: $border-radius;
+  padding: 0.5rem 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0px 0px 7px 8px lighten($main-color, 80);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 7px 15px lighten($main-color, 100);
+}
+.btn_outline {
+  border: 3px solid $white;
+  background-color: transparent;
+  color: $white;
+  box-shadow: unset;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn_outline:hover {
+  box-shadow: unset;
+  color: $main-color;
+  background-color: $white;
+}
+
+.btn.small {
+  border-width: 2px;
+  padding: 0.25rem 1.5rem;
+  font-size: 1rem;
+}
